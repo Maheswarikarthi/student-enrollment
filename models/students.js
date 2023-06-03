@@ -1,17 +1,18 @@
+// 
+
 const mongoose=require('mongoose');
-const studentSchema=new mongoose.Schema({
+const studentsSchema=new mongoose.Schema({
     name:{
         type:String,
-        require:true
+        required:true
     },
     enrolledDepartment:{
         type:String,
-        require:true
-
+        required:true
     },
     enrollmentDate:{
         type:Date,
         default:Date.now
     }
 });
-module.exports=mongoose.model('studentModel',studentSchema)
+module.exports=mongoose.model('studentsModel',studentsSchema)
